@@ -8,6 +8,10 @@ export default class Meme extends Component {
       <div>
         <Header />
         <MemeShape />
+
+        <div>
+          <h2>Collection></h2>
+        </div>
       </div>
     );
   }
