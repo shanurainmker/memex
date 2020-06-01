@@ -1,13 +1,56 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.imgSet {
+  width: 100%;
+  height: 60px;
+}
+
+.MemCon {
+  display: flex;
+  justify-content: center;
+}
+.MemCon img {
+  height: 350px;
+  width: 450px;
+  position: relative;
+}
+h2.top {
+  position: absolute;
+  color: #fff;
+  font-family: sans-serif;
+  margin-left: 10px;
+  margin-top: 10px;
+  font-size: 28px;
+  z-index: 999;
+}
+h2.bottom {
+  position: absolute;
+  color: #fff;
+  font-family: sans-serif;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-size: 28px;
+  z-index: 999;
+  margin-top: -55px;
+}
+
+.memInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.foot {
+  flex-direction: row;
 }
