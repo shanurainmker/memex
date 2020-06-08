@@ -13,9 +13,15 @@ export default class MemeShape extends Component {
       randomImg:
         "https://i.pinimg.com/474x/00/ec/66/00ec66f4b2ae0b724120753982bdef26.jpg",
       memeBacks: [],
+      collection: [],
     };
   }
 
+  sendCollect = (imgFav) => {
+    console.log("randomImg in memeshapes", imgFav);
+
+    this.props.getCollection(imgFav);
+  };
   componentDidMount() {
     fetch("https://api.imgflip.com/get_memes")
       .then((data) => data.json())
@@ -31,8 +37,9 @@ export default class MemeShape extends Component {
   };
 
   shuffle = () => {
+    //  ;
     var num = this.gen(0, this.state.imgeApi.length);
-    const urlMeme = this.state.imgeApi[num].url;
+    const urlMeme = this.state.imgeApi[num];
     this.setState({
       randomImg: urlMeme,
       memeBacks: [...this.state.memeBacks, urlMeme],
@@ -52,7 +59,7 @@ export default class MemeShape extends Component {
     });
   };
   gen(min, max) {
-    debugger;
+    //   ;
     var _temp = Math.floor(Math.random() * (max - min) + min);
     console.log("gen", _temp);
     return _temp;
@@ -87,7 +94,11 @@ export default class MemeShape extends Component {
         </form>
         <hr />
         <div className="MemCon">
-          <MemeImg imgDet={this.state} randomImg={this.state.randomImg} />
+          <MemeImg
+            imgDet={this.state}
+            randomImg={this.state.randomImg}
+            sentcollectMene={this.sendCollect}
+          />
         </div>
         <hr />
         <div className="memInput foot">

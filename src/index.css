@@ -12,7 +12,7 @@ code {
     monospace;
 }
 .imgSet {
-  width: 100%;
+  width: 150px;
   height: 60px;
 }
 
@@ -53,4 +53,8 @@ h2.bottom {
 }
 .foot {
   flex-direction: row;
+}
+.like {
+  width: 20px !important;
+  height: 20px !important;
 }
